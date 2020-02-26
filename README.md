@@ -12,7 +12,7 @@ Because you may want to use kaniko to build your images in kubernetes, and envsu
 build_image:
   stage: build
   image:
-    name: $DOCKER_IMAGES_PROJECT/kaniko:latest
+    name: papko26/kaniko_envsubst
     entrypoint: [""]
   script:
     - cat $CI_PROJECT_NAME.Dockerfile | envsubst > $CI_PROJECT_NAME.busted.Dockerfile
