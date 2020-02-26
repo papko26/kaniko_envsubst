@@ -1,13 +1,17 @@
+
+![](https://img.shields.io/docker/pulls/papko26/kaniko_envsubst.svg)
+![](https://img.shields.io/docker/cloud/build/papko26/kaniko_envsubst.svg)
 # kaniko_envsubst
 docker pull papko26/kaniko_envsubst
 
 ### TLDR:
-GoogleContainerTools/kaniko + a8m/envsubst dockerfile
+[GoogleContainerTools/kaniko](https://github.com/GoogleContainerTools/kaniko) + [a8m/envsubst](https://github.com/a8m/envsubst) image for gitlab runner on kubernetes.
 
 ### Why?
 Because you may want to use kaniko to build your images in kubernetes, and envsubst to dynamically replace variables in dockerfile from ENV
 
 ### How?
+`.gitlab-ci.yml`
 ```yaml
 build_image:
   stage: build
